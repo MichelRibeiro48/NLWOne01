@@ -18,7 +18,14 @@ export default function Home() {
   const [participants, setParticipants] = useState<ParticiantType>([]);
 
   const handleAddParticipant = () => {
-    setParticipants([...participants, name]);
+    if (participants.includes(name)) {
+      Alert.alert(
+        "Participante Existente",
+        "Já existe um participante com esse nome"
+      );
+    } else {
+      setParticipants([...participants, name]);
+    }
   };
   return (
     <View style={styles.mainPage}>
