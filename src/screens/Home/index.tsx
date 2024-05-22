@@ -64,7 +64,7 @@ export default function Home() {
           <Participant
             name={item}
             onPress={() =>
-              Alert.alert("Remover", `Remover o ${participants[index]}`, [
+              Alert.alert("Remover", `Remover o ${participants[index]}?`, [
                 {
                   text: "Não",
                   style: "cancel",
